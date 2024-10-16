@@ -1,4 +1,4 @@
-VARCHARCREATE TABLE designer_records (
+    CREATE TABLE designer_records (
     designer_id INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR (50),
     last_name VARCHAR (50),

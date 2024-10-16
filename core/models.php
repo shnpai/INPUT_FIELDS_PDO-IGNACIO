@@ -45,11 +45,11 @@ function updateADesigner($pdo, $designer_id, $first_name, $last_name,
 					designation = ?, 
 					designtool = ?, 
 					supervisor = ? 
-			WHERE $designer_id = ?";
+			 WHERE  designer_id = ?";
 	$stmt = $pdo->prepare($sql);
 	
 	$executeQuery = $stmt->execute([$first_name, $last_name, $gender, 
-    $email, $designation, $designtool, $supervisor, $$designer_id]);
+    $email, $designation, $designtool, $supervisor, $designer_id]);
 
 	if ($executeQuery) {
 		return true;
@@ -58,7 +58,7 @@ function updateADesigner($pdo, $designer_id, $first_name, $last_name,
 
 
 
-function deleteAStudent($pdo, $designer_id) {
+function deleteADesigner($pdo, $designer_id) {
 
 	$sql = "DELETE FROM designer_records WHERE designer_id = ?";
 	$stmt = $pdo->prepare($sql);
